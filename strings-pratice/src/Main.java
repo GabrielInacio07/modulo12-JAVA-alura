@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         System.out.println("Ex04");
-
+    //teste
         Scanner input = new Scanner(System.in);
 
         System.out.print("Digite o nome do arquivo: ");
