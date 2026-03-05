@@ -2,29 +2,25 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        System.out.println("Ex03");
+        System.out.println("Ex04");
 
-        Scanner input =  new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("Digite o texto: ");
-        String texto = input.nextLine();
+        System.out.print("Digite o nome do arquivo: ");
+        String arquivo = input.nextLine();
 
-        System.out.println("Texto: " + texto);
+        if (arquivo.trim().isEmpty()) {
+            System.out.println("Nome inválido!");
+            return;
+        }
 
-        System.out.print("Digite a palavra a ser substituída: ");
-        String substituida = input.nextLine();
+        int indicePonto = arquivo.lastIndexOf(".");
 
-        if (substituida.trim().isEmpty()) {
-            System.out.println("Palavra inválida!");
-
-        }else if (texto.toLowerCase().contains(substituida.toLowerCase()))  {
-            System.out.print("Digite a nova palavra: ");
-            String novaPalavra = input.nextLine();
-
-            String textoModificado = texto.replaceAll("(?i)" +substituida, novaPalavra);
-            System.out.println("Texto modificado: " + textoModificado);
+        if (indicePonto == -1) {
+            System.out.println("Arquivo não possui extensão.");
         } else {
-            System.out.println("Palavra não encontrada!");
+            String nomeSemExtensao = arquivo.substring(0, indicePonto);
+            System.out.println("Nome do arquivo sem extensão: " + nomeSemExtensao);
         }
 
         input.close();
