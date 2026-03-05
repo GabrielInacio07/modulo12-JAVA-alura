@@ -1,34 +1,18 @@
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Scanner;
 
-//https://regex101.com/
-
-class Main{
+class Main {
     public static void main(String[] args) {
+        System.out.println("Ex01");
 
-//        String texto = "ADMIN: teste@gmail.com";
-//
-//        Pattern pattern = Pattern.compile("\\w+@\\w+.\\w+");
-//        Matcher matcher = pattern.matcher(texto);
-//
-//        if(matcher.find()){
-//            System.out.println(matcher.group());
-//        }
+        Scanner input =  new Scanner(System.in);
 
-        System.out.println(telfoneFormatter("18981466635"));
+        System.out.print("Digite seu nome: ");
+        String nome = input.nextLine();
 
-    }
+        String nameNoSpace = nome.trim();
 
-
-    public static String telfoneFormatter(String telefone){
-        String regex = "(\\d{2})(\\d{4,5})(\\d{4})";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(telefone);
-
-        if(matcher.matches()){
-            return String.format("(%s) %s-%s", matcher.group(1),matcher.group(2),matcher.group(3));
-        }
-
-        return "Número de telefone Inválido";
+        System.out.println("Nome original: [" + nome + "]");
+        System.out.println("Nome sem espaços: [" + nameNoSpace + "]");
+        input.close();
     }
 }
