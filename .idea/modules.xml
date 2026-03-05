@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modulo12-JAVA-alura.iml" filepath="$PROJECT_DIR$/.idea/modulo12-JAVA-alura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/strings-pratice/strings-pratice.iml" filepath="$PROJECT_DIR$/strings-pratice/strings-pratice.iml" />
+    </modules>
+  </component>
+</project>
