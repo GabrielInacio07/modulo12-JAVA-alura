@@ -2,17 +2,24 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        System.out.println("Ex01");
+        System.out.println("Ex02");
 
         Scanner input =  new Scanner(System.in);
 
-        System.out.print("Digite seu nome: ");
-        String nome = input.nextLine();
+        System.out.print("Digite o texto: ");
+        String texto = input.nextLine();
 
-        String nameNoSpace = nome.trim();
+        String maiusculo = texto.toUpperCase();
+        String minusculo = texto.toLowerCase();
 
-        System.out.println("Nome original: [" + nome + "]");
-        System.out.println("Nome sem espaços: [" + nameNoSpace + "]");
+        if(texto.trim().isEmpty()){
+            System.out.println("Texto não pode ser vázio");
+        }else{
+            System.out.println("Texto em maiúsculas: " + maiusculo);
+            System.out.println("Texto em minúsculas: " + minusculo);
+        }
+
+
         input.close();
     }
 }
